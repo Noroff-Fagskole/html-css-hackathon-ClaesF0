@@ -1,0 +1,262 @@
+@font-face {
+  font-family: "Lobster";
+  src: url(../fonts/lobster/lobster-regular.ttf) format("ttf"),
+    url("../fonts/ibm_plex_sans/IBMPlexSans-Bold.ttf") format("ttf"),
+    url("../fonts/ibm_plex_sans/IBMPlexSans-Light.ttf") format("ttf");
+}
+
+body {
+  background-color: #eee;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  color: #444;
+  font-weight: normal;
+  line-height: 1.4;
+}
+
+/*
+Mobile, 320
+Tablet, 767
+Desktop 1024
+*/
+
+.color-red {
+  color: red;
+}
+
+main img {
+  width: 100%;
+  /*max-width: 767px;*/
+  margin: 0 auto 0 auto;
+  display: block;
+}
+
+.app-header {
+  border-bottom: 1px solid #999;
+  padding-bottom: 1em;
+}
+
+.app-logo {
+  display: inline-block;
+}
+
+.inner {
+  max-width: 1080px;
+  margin: 0 auto;
+}
+
+.app-logo img {
+  min-width: 160px;
+}
+
+.app-navigation {
+  float: right;
+}
+
+.app-navigation a:link {
+  text-decoration: none;
+  color: #444;
+  padding: 0.5em;
+}
+
+.app-navigation a:visited {
+  text-decoration: none;
+  color: #444;
+}
+
+.app-navigation a:active {
+  text-decoration: none;
+  color: chartreuse;
+}
+
+.app-navigation a:hover {
+  text-decoration: none;
+  color: turquoise;
+}
+
+/* a:link, a:visited, a:active, a:hover */
+
+.app-navigation-drawer {
+  /*hide nav on load*/
+  display: block;
+  background: #fff;
+  padding: 0.5em;
+  border-bottom: 2px solid green;
+  list-style: none;
+  /*animate default state on page load*/
+  transition: all 0.9s linear;
+  transform: translateY(-150%);
+}
+
+.sr-only {
+  display: none;
+}
+
+#hamburger-menu {
+  /* hide the checkbox */
+  display: none;
+}
+
+#hamburger-menu label {
+  cursor: pointer;
+}
+
+#hamburger-menu:checked ~ .app-navigation-drawer {
+  /*show nav on :checked */
+  display: block;
+  /*animasjon for chekd*/
+  transform: translateY(0px);
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0;
+  font-family: "lobster";
+}
+
+p {
+  font-family: "IBM Plex Sans", sans-serif;
+}
+
+/*
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@500&family=Lobster&display=swap" rel="stylesheet">
+
+font-family: 'IBM Plex Sans', sans-serif;
+font-family: 'Lobster', cursive;
+
+
+   <a href="/" class="app-logo">
+        <img src="./img/logo.png" alt="CSS Tricks" />
+      </a>
+      <nav class="app-navigation">
+        <a href="/">Home</a>
+        <a href="./about.html">About</a>
+        <a href="./contact.html">Contact</a>
+        <a href="./login.html">Signup</a>
+      </nav>
+
+
+*/
+
+form {
+  background-color: skyblue;
+}
+
+form fieldset {
+  border: 5px dashed greenyellow;
+  padding: 0.5em 0 1em 1em;
+  background-color: #fff;
+}
+
+form fieldset legend {
+  font-style: italic;
+  font-size: 2em;
+}
+
+form label {
+  display: block;
+}
+
+form h5 {
+  margin-bottom: 5px;
+}
+
+.input-text {
+  border: 1px solid #444;
+  padding: 0.2em;
+  color: #666;
+  border-radius: 6px;
+}
+
+textarea {
+  border-radius: 6px;
+}
+
+input[type="submit"] {
+  background-color: rgb(44, 66, 65);
+  width: 100%;
+  cursor: pointer;
+  padding: 0.5em;
+}
+
+input[type="submit"]:hover {
+  background-color: lime;
+}
+
+/*
+input[type="text"] {
+  border: 3px solid red;
+}
+
+input[type="email"] {
+  border: 3px solid green;
+}
+
+input[type="tel"] {
+  border: 3px solid yellow;
+}
+*/
+
+.footer {
+  background-color: aqua;
+}
+
+.footer .column {
+  display: block;
+  width: 20%;
+}
+
+/*I AM TABLET AND DESKTOP*/
+@media screen and (min-width: 767px) {
+  .app-navigation-drawer {
+    transform: translateY(0);
+    background: transparent;
+    border-bottom: none;
+  }
+
+  .fa-bars {
+    display: none;
+  }
+
+  .app-navigation-drawer li {
+    display: inline-block;
+  }
+
+  .app-article {
+    display: inline-block;
+    /* border: 1px solid red; */
+    width: 60%;
+  }
+  .app-sidebar {
+    display: inline-block;
+    /*border: 1px solid green;*/
+    width: 35%;
+    vertical-align: top;
+  }
+  .footer .column {
+    display: inline-block;
+    width: 20%;
+  }
+} /*DESKTOP media query ENDS HERE*/
+
+/* @media screen and (min-width: 767px) {
+  .app-navigation-drawer {
+    
+    >hide nav on load<
+    
+    display: block;
+    background: #fff;
+    padding: 0.5em;
+    border-bottom: 2px solid green;
+    list-style: none;
+    
+    >animate default state on page load<
+
+    transition: all 0.9s linear;
+    transform: translateY(-150%);
+  }
+  
+  */
